@@ -1,0 +1,12 @@
+# OS/Editor
+.DS_Store
+Thumbs.db
+
+# Local browser profile (exclude from repo)
+.browser_profile/
+
+# Logs
+*.log
+
+# Mac app bundle (removed but keep ignored)
+Launch Profil Generator.app/

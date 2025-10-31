@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anleitung – Profil‑Generator</title>
+    <style>
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;margin:0;color:#0f1113;line-height:1.5}
+      .wrap{max-width:900px;margin:0 auto;padding:20px}
+      h1{font-size:22px;margin:0 0 12px 0}
+      h2{font-size:18px;margin:18px 0 8px}
+      p{margin:8px 0}
+      ol{margin:8px 0 16px 22px}
+      li{margin:6px 0}
+      .tip{background:#f1f5f9;border-left:4px solid #94a3b8;padding:10px 12px;border-radius:6px;margin:12px 0}
+      .small{font-size:13px;color:#475569}
+      code{background:#f8fafc;border:1px solid #e2e8f0;border-radius:4px;padding:0 4px}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>So benutzt du den Profil‑Generator (für absolute Anfänger)</h1>
+      <p>Keine Sorge – hier ist alles Schritt für Schritt erklärt.</p>
+
+      <h2>1) Programm öffnen</h2>
+      <ol>
+        <li>Doppelklicke auf <code>index.html</code>. Die Seite öffnet sich im Browser.</li>
+      </ol>
+
+      <h2>2) Kurzen Text einfügen</h2>
+      <ol>
+        <li>Im Feld „Kurzprofil (Freitext)“ den Text zum Kandidaten einfügen. Beispiel: Erfahrungen, Schwerpunkte, Ausbildung, Gehaltswunsch, Verfügbarkeit.</li>
+        <li>Falls in deinem Text eine Zeile wie „Profil 9483:“ steht, wird die Nummer automatisch als Profil‑ID übernommen.</li>
+      </ol>
+
+      <h2>3) Kontaktdaten eintragen</h2>
+      <ol>
+        <li>Dein Name, E‑Mail und Telefonnummer ausfüllen (Pflichtfelder).</li>
+      </ol>
+
+      <h2>4) Standort des Stellenangebots</h2>
+      <ol>
+        <li>Im Feld „Standort Stellenangebot“ den Ort angeben (z. B. „München / Remote“). Dieser Ort dient als <b>Ausgangspunkt</b> – der Wohnort im Profil wird <b>in plausibler Nähe</b> dazu gewählt (nicht zwingend derselbe Ort).</li>
+      </ol>
+
+      <h2>5) OpenAI‑Schlüssel (für die Generierung)</h2>
+      <ol>
+        <li>Trage deinen OpenAI API‑Schlüssel ein (beginnt meist mit <code>sk-</code>). Er wird nur lokal in deinem Browser gespeichert. <b>Falls du keinen Schlüssel hast, wende dich bitte an den System‑Administrator.</b></li>
+        <li>Wähle ein Modell (Standard ist bereits voreingestellt).</li>
+      </ol>
+
+      <h2>6) Profil generieren</h2>
+      <ol>
+        <li>Klicke auf „LLM generieren“. Kurz warten.</li>
+        <li>Das Profil wird erzeugt und im Tab „Profil (Bearbeiten)“ angezeigt.</li>
+      </ol>
+
+      <h2>7) Interne Kennung prüfen</h2>
+      <ol>
+        <li>„Profil‑ID“, „Geburtsjahr“, „Wohnort“, „Familienstand“, „Staatsangehörigkeit“ werden angezeigt.</li>
+        <li>„Familienstand“ ist immer „ledig“ und „Staatsangehörigkeit“ ist immer „deutsch“ (so vorgegeben).</li>
+      </ol>
+
+      <h2>8) Inhalt bearbeiten</h2>
+      <ol>
+        <li>Im Tab „Profil (Bearbeiten)“ kannst du alle Felder ändern.</li>
+        <li>Hinweise/Fehler werden oben als Badges angezeigt.</li>
+      </ol>
+
+      <h2>9) Vorschau & Export</h2>
+      <ol>
+        <li>Nutze „Template Vorschau“ bzw. „Vollbild Vorschau“, um das Layout zu prüfen.</li>
+        <li>Mit „Export als PDF“ wird eine druckfertige PDF erzeugt.</li>
+      </ol>
+
+      <div class="tip">
+        <b>Tipp:</b> Der Generator speichert dein Profil automatisch lokal im Browser. Wenn du die Seite neu öffnest, sind deine Daten noch da.
+      </div>
+
+      <h2>Probleme?</h2>
+      <p class="small">Kein Profil? Prüfe, ob der OpenAI‑Schlüssel korrekt ist. Achte darauf, dass alle Pflichtfelder in den Eingaben ausgefüllt sind.</p>
+    </div>
+  </body>
+  </html>
+
+

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>README – Profil‑Generator</title>
+    <style>
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;margin:0;color:#0f1113;line-height:1.5}
+      .wrap{max-width:900px;margin:0 auto;padding:20px}
+      h1{font-size:22px;margin:0 0 12px 0}
+      h2{font-size:18px;margin:18px 0 8px}
+      p{margin:8px 0}
+      ol{margin:8px 0 16px 22px}
+      li{margin:6px 0}
+      .tip{background:#f1f5f9;border-left:4px solid #94a3b8;padding:10px 12px;border-radius:6px;margin:12px 0}
+      .small{font-size:13px;color:#475569}
+      code{background:#f8fafc;border:1px solid #e2e8f0;border-radius:4px;padding:0 4px}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>README – Profil‑Generator</h1>
+      <p>Bitte starte die Anwendung über die Datei <code>Launch-Profil-Generator.cmd</code>. So öffnet sich die Seite korrekt im Browser und alles funktioniert zuverlässig.</p>
+
+      <h2>1) Programm starten</h2>
+      <ol>
+        <li>Doppelklicke auf <code>Launch-Profil-Generator.cmd</code>. Dein Browser öffnet sich automatisch.</li>
+      </ol>
+
+      <h2>2) Kurzen Text einfügen</h2>
+      <ol>
+        <li>Im Feld „Kurzprofil (Freitext)“ den Text zum Kandidaten einfügen. Beispiel: Erfahrungen, Schwerpunkte, Ausbildung, Gehaltswunsch, Verfügbarkeit.</li>
+        <li>Falls im Text „Profil 1234:“ vorkommt, wird die Nummer als Profil‑ID übernommen.</li>
+      </ol>
+
+      <h2>3) Kontaktdaten eintragen</h2>
+      <ol>
+        <li>Dein Name, E‑Mail und Telefonnummer ausfüllen (Pflichtfelder).</li>
+      </ol>
+
+      <h2>4) Standort des Stellenangebots</h2>
+      <ol>
+        <li>Trage den Ort ein (z. B. „München / Remote“). Dieser Ort dient als <b>Ausgangspunkt</b>; der Wohnort im Profil wird <b>in plausibler Nähe</b> dazu gewählt (nicht zwingend identisch).</li>
+      </ol>
+
+      <h2>5) OpenAI‑Schlüssel</h2>
+      <ol>
+        <li>Trage deinen OpenAI API‑Schlüssel ein (beginnt meist mit <code>sk-</code>). Er wird nur lokal im Browser gespeichert. <b>Wenn du keinen Schlüssel hast, wende dich an den System‑Administrator.</b></li>
+        <li>Wähle bei Bedarf ein Modell.</li>
+      </ol>
+
+      <h2>6) Profil generieren</h2>
+      <ol>
+        <li>Klicke auf „LLM generieren“. Kurz warten, dann zum Tab „Profil (Bearbeiten)“ wechseln.</li>
+      </ol>
+
+      <h2>7) Interne Kennung prüfen</h2>
+      <ol>
+        <li>„Profil‑ID“, „Geburtsjahr“, „Wohnort“, „Familienstand (ledig)“, „Staatsangehörigkeit (deutsch)“ werden angezeigt.</li>
+      </ol>
+
+      <h2>8) Bearbeiten, Vorschau & PDF</h2>
+      <ol>
+        <li>Bearbeite Inhalte im Tab „Profil (Bearbeiten)“.</li>
+        <li>Nutze „Vollbild Vorschau“/„Eingabe anzeigen“ zum Umschalten.</li>
+        <li>„Export als PDF“ erzeugt eine druckfertige Datei.</li>
+      </ol>
+
+      <div class="tip">
+        <b>Tipp:</b> Die Anwendung speichert deine Bearbeitungen lokal im Browser und lädt sie beim nächsten Start automatisch.
+      </div>
+    </div>
+    <div class="wrap">
+      <h2>Fragen & Antworten (Q&A)</h2>
+      <p><b>Was mache ich, wenn das Profil nicht passt? Wenn mir das Profil nicht gefällt?</b></p>
+      <p>Du hast zwei Möglichkeiten:</p>
+      <ol>
+        <li><b>Gezielt anpassen:</b> Wechsle zum Tab „Profil (Bearbeiten)“ und ändere einzelne Felder (z. B. Berufsziel, Aufgaben, Ergebnisse, Wohnort usw.).</li>
+        <li><b>Neu generieren:</b> Klicke einfach erneut auf „LLM generieren“. Das Modell erstellt ein neues Profil. Oft hilft eine kleine Änderung im Freitext (z. B. Schwerpunkte konkreter nennen).</li>
+      </ol>
+
+      <p><b>Welche Daten darf ich eingeben?</b></p>
+      <p>Bitte keine echten Arbeitgeber‑, Hochschul‑ oder Personennamen eintragen. Verwende nur allgemeine Beschreibungen (z. B. „Immobiliengesellschaft (KMU)“, „Region München“).</p>
+
+      <p><b>Der Wohnort wirkt unplausibel. Was tun?</b></p>
+      <p>Trage beim „Standort Stellenangebot“ einen Ort ein, der als Ausgangspunkt dient. Der Wohnort im Profil sollte in plausibler Nähe liegen. Alternativ im Tab „Profil (Bearbeiten)“ den Wohnort manuell anpassen.</p>
+
+      <p><b>Warum ist der Name immer „[Anonymisiert]“?</b></p>
+      <p>Zum Schutz der Privatsphäre. Das Profil ist für anonymisierte Vorabprüfungen gedacht. Reale Namen werden nicht verwendet.</p>
+
+      <p><b>Kann ich bestimmte Formulierungen anpassen?</b></p>
+      <p>Ja. Du kannst Texte in „Profil (Bearbeiten)“ frei anpassen (z. B. Aufgaben kürzen, Ergebnisse präzisieren, Tonalität ändern).</p>
+
+      <p><b>Wie bekomme ich einen OpenAI‑Schlüssel?</b></p>
+      <p>Wenn du noch keinen Schlüssel hast, wende dich bitte an den System‑Administrator.</p>
+
+      <p><b>Beim Export stimmt das Layout nicht ganz.</b></p>
+      <p>Nutze die PDF‑Exportfunktion im Tool. Das Ergebnis ist für A4 optimiert. Bei Darstellungsproblemen die Inhalte etwas kürzen oder „Vollbild Vorschau“ prüfen.</p>
+    </div>
+  </body>
+  </html>
+
+
