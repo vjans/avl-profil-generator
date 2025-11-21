@@ -8,7 +8,7 @@ export function applyOverflowPolicy(profile, { onePager=false }={}){
   // Caps
   p.beruflicher_werdegang = (p.beruflicher_werdegang||[]).slice(0,4);
   p.beruflicher_werdegang.forEach(st=>{
-    st.aufgaben = (st.aufgaben||[]).slice(0,3);
+    st.aufgaben = (st.aufgaben||[]);
   });
   const k = p.kenntnisse_und_faehigkeiten;
   if(k){

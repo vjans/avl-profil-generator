@@ -175,7 +175,7 @@ function isKpiBullet(text){
 
 function renderTasks(list){
   const arr = Array.isArray(list) ? list : [];
-  const filtered = arr.filter(a=> !isKpiBullet(a)).slice(0,3);
+  const filtered = arr.filter(a=> !isKpiBullet(a));
   return filtered.map(a=>`<li>${escapeHtml(a)}</li>`).join('');
 }
 
