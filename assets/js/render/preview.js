@@ -65,21 +65,29 @@ function template(p, ui){
           </div>
           <div class="block">
             <h2>Kenntnisse &amp; Fähigkeiten</h2>
-            <div class="subhead">Haupt Job-Relevantes Skillset</div>
-            <div class="list-plain">
-              ${p.kenntnisse_und_faehigkeiten.job_spezifisch.map(s=>`<div>${escapeHtml(s)}</div>`).join('')}
+            <div class="skills-subgroup avoid-break">
+              <div class="subhead">Haupt Job-Relevantes Skillset</div>
+              <div class="list-plain">
+                ${p.kenntnisse_und_faehigkeiten.job_spezifisch.map(s=>`<div>${escapeHtml(s)}</div>`).join('')}
+              </div>
             </div>
-            <div class="subhead">Softwarekenntnisse</div>
-            <div class="list-plain">
-              ${p.kenntnisse_und_faehigkeiten.software.map(s=>`<div>${escapeHtml(s)}</div>`).join('')}
+            <div class="skills-subgroup avoid-break">
+              <div class="subhead">Softwarekenntnisse</div>
+              <div class="list-plain">
+                ${p.kenntnisse_und_faehigkeiten.software.map(s=>`<div>${escapeHtml(s)}</div>`).join('')}
+              </div>
             </div>
-            <div class="subhead">Sprachen</div>
-            <div class="list-plain">
-              ${p.kenntnisse_und_faehigkeiten.sprachen.map(s=>`<div>${escapeHtml(s.sprache)}: ${escapeHtml(s.niveau)}</div>`).join('')}
+            <div class="skills-subgroup avoid-break">
+              <div class="subhead">Sprachen</div>
+              <div class="list-plain">
+                ${p.kenntnisse_und_faehigkeiten.sprachen.map(s=>`<div>${escapeHtml(s.sprache)}: ${escapeHtml(s.niveau)}</div>`).join('')}
+              </div>
             </div>
-            <div class="subhead">Persönliche Stärken</div>
-            <div class="list-plain">
-              ${p.kenntnisse_und_faehigkeiten.persoenliche_staerken.map(s=>`<div>${escapeHtml(s)}</div>`).join('')}
+            <div class="skills-subgroup avoid-break">
+              <div class="subhead">Persönliche Stärken</div>
+              <div class="list-plain">
+                ${p.kenntnisse_und_faehigkeiten.persoenliche_staerken.map(s=>`<div>${escapeHtml(s)}</div>`).join('')}
+              </div>
             </div>
           </div>
         </aside>
@@ -99,8 +107,10 @@ function template(p, ui){
           ${Array.isArray(p.beruflicher_werdegang) && p.beruflicher_werdegang.length>0 ? `<div class="block">
             <h2>Beruflicher Werdegang</h2>
             ${p.beruflicher_werdegang.map(st=>`<section class="workexp avoid-break">
-              <h3>${escapeHtml(st.jobtitel)}</h3>
-              <div class="where">${escapeHtml(st.unternehmenstyp)} · ${escapeHtml(st.dauer)} · ${escapeHtml(st.ort)}</div>
+              <div class="workexp-head avoid-break">
+                <h3>${escapeHtml(st.jobtitel)}</h3>
+                <div class="where">${escapeHtml(st.unternehmenstyp)} · ${escapeHtml(st.dauer)} · ${escapeHtml(st.ort)}</div>
+              </div>
               <ul class="list">
                 ${renderTasks(st.aufgaben)}
               </ul>

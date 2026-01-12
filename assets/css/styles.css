@@ -67,8 +67,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid var(--border);bor
 @page{size:A4;margin:16mm 6mm 16mm 6mm}
 @page first{margin-top:16mm}
 .paper{width:210mm;margin:0 auto;background:white;color:black;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.page{page-break-after:always;padding:0}
-.page:last-child{page-break-after:avoid}
+.page{padding:0}
 
 /* First-page layout */
 .first-page{display:grid;grid-template-columns:1fr 2fr;gap:18mm;padding:0}
@@ -142,16 +141,33 @@ input,select,textarea{width:100%;padding:10px;border:1px solid var(--border);bor
 .cvdoc .kv-single .lab{text-align:right}
 .cvdoc .kv-single .val{text-align:right}
 .cvdoc .subhead{font-size:12px;font-weight:900;letter-spacing:.1px;margin:3mm 0 1.4mm 0}
+.cvdoc .skills-subgroup{margin-top:3mm}
+.cvdoc .skills-subgroup:first-of-type{margin-top:0}
 .cvdoc .list-plain{margin:1mm 0 0 0;padding:0;display:grid;row-gap:1mm}
 .cvdoc .list-plain div{line-height:1.1}
 .cvdoc .list{list-style:disc;margin:1mm 0 0 5mm;padding:0}
 .cvdoc .list li{margin:0;line-height:1.1}
 .cvdoc .workexp h3,.cvdoc .edu h3{font-size:12px;font-weight:800;margin:0}
+.cvdoc .workexp-head{break-inside:avoid-page;page-break-inside:avoid}
 .cvdoc .where{margin-top:.6mm;color:#5f6470;font-size:9.4px}
 .cvdoc .workexp+.workexp{margin-top:4.2mm}
 .cvdoc .contact .row{font-weight:800;margin:.8mm 0}
 .cvdoc .contact .label{display:inline-block;min-width:56px}
-.cvdoc .avoid-break{break-inside:avoid}
+.cvdoc .avoid-break{
+  /* Be extra explicit for html2pdf/html2canvas pagebreak heuristics */
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+/* Prevent orphaned headings at page boundaries */
+.cvdoc h2,.cvdoc h3,.cvdoc .subhead{
+  break-after: avoid-page;
+  page-break-after: avoid;
+}
+.cvdoc .workexp h3 + .where{
+  break-before: avoid-page;
+  page-break-before: avoid;
+}
 
 /* cvdoc print-only running header/footer */
 .cvdoc .print-header{display:none}
@@ -169,6 +185,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid var(--border);bor
 }
 
 .cvdoc.exporting .export-logo,.cvdoc.exporting .export-band{display:block}
-.cvdoc.exporting .page{padding-bottom:32mm}
+.cvdoc.exporting:not(.no-css-band) .page{padding-bottom:32mm}
+.cvdoc.exporting.no-css-band .page{padding-bottom:0}
 
 
