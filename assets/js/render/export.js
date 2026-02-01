@@ -16,7 +16,7 @@ export function formatFilenameAndExport(profile){
       const bandHeight = 30; // mm
       const footerGap = 16; // mm visual gap between content and band
       const opt = {
-        margin: [16,6,bandHeight + footerGap,6],
+        margin: [16,0,bandHeight + footerGap,0],
         filename: name,
         image: { type:'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS:true },
@@ -93,7 +93,7 @@ function applySoftPageBreaks(container, baseEl, opt){
 
   // Candidates we want to keep together if they'd be split by the page slice.
   // This is intentionally limited to avoid pushing "whole blocks" unnecessarily.
-  const candidates = Array.from(container.querySelectorAll('.skills-subgroup, .workexp'));
+  const candidates = Array.from(container.querySelectorAll('.skills-subgroup, .workexp, .edu-entry'));
 
   for(const el of candidates){
     // Skip if already forced.
@@ -106,10 +106,13 @@ function applySoftPageBreaks(container, baseEl, opt){
 
     const pageIndex = Math.floor((top + 1) / domPageHeightPx);
     const pageBottom = (pageIndex + 1) * domPageHeightPx;
+    // Add safety buffer (~5mm in DOM pixels) to catch elements near page boundary
+    const safetyBuffer = baseWidthPx * (5 / innerWidthMm);
+    const safePageBottom = pageBottom - safetyBuffer;
 
-    // If the element crosses a page boundary (would be sliced), push it to the next page,
+    // If the element crosses or is near a page boundary (would be sliced), push it to the next page,
     // but only if it can reasonably fit on a page.
-    if(bottom > pageBottom && h < domPageHeightPx * 0.98){
+    if(bottom > safePageBottom && h < domPageHeightPx * 0.98){
       el.style.breakBefore = 'page';
       el.style.pageBreakBefore = 'always';
       el.dataset.exportPb = '1';
