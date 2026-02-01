@@ -116,9 +116,9 @@ function template(p, ui){
               </ul>
             </section>`).join('')}
           </div>` : ''}
-          <div class="block avoid-break edu">
+          <div class="block edu">
             <h2>Akademische Laufbahn</h2>
-            ${p.akademische_laufbahn.map(st=>`<div>
+            ${p.akademische_laufbahn.map(st=>`<div class="edu-entry avoid-break">
               <h3>${escapeHtml(st.station)}</h3>
               <div class="where">${escapeHtml(st.dauer)} · ${escapeHtml(st.ort)}</div>
             </div>`).join('')}
