@@ -1,4 +1,4 @@
-export const PROFILE_SCHEMA = {
+﻿export const PROFILE_SCHEMA = {
   name: 'cv_template_v2',
   strict: true,
   schema: {
@@ -124,19 +124,24 @@ Pflichtvorgaben für person_data:
 - wohnort: wähle einen plausiblen Ort in der Nähe des Stellenstandorts (nicht zwingend identisch).
 - geburtsjahr MUSS plausibel gesetzt sein (z. B. aus dem Karriereverlauf ableiten).
 
-Spezifitätsleitlinien für den Abschnitt „Beruflicher Werdegang“:
+Spezifitätsleitlinien für den Abschnitt „Beruflicher Werdegang":
 - Vermeide generische Formulierungen. Bevorzuge konkrete Tätigkeiten, Systeme/Tools, Dokument-/Prozesstypen und Rechtsgrundlagen.
-- Keine quantifizierten Ergebnisbehauptungen oder KPI-Aussagen (keine Prozentangaben, „reduziert/steigerte um X%“ etc.).
+- Keine quantifizierten Ergebnisbehauptungen oder KPI-Aussagen (keine Prozentangaben, „reduziert/steigerte um X%" etc.).
+- WICHTIG: Keine Genderbezeichnungen wie (m/w/d), (w/m/d), (m/f/d) oder ähnliche in Jobtiteln verwenden. Jobtitel sollen neutral ohne solche Zusätze sein.
 
 Beispiel (Finanzbuchhalter) – gewünschte Spezifität der Aufgaben-Bullets:
 - Debitoren-/Kreditorenbuchhaltung inkl. Rechnungseingang/-ausgang, OP-Verwaltung und Mahnwesen (DATEV/SAP FI)
 - Vorbereitung der USt‑Voranmeldung und Zusammenfassenden Meldung, Klärung von Sachverhalten mit dem Steuerberater
 - Anlagenbuchhaltung (SKR03/04), monatliche Abgrenzungen und Vorbereitungen für den HGB‑Monatsabschluss
 
-Anzahl der Stationen in „Beruflicher Werdegang“ abhängig von Erfahrung (falls ableitbar):
+Anzahl der Stationen in „Beruflicher Werdegang" abhängig von Erfahrung (falls ableitbar):
 - ≥13 Jahre Berufserfahrung → 4 Stationen
 - ≥8 Jahre → 3 Stationen
 - sonst → 2 Stationen
+
+WICHTIG zur Reihenfolge:
+- „Beruflicher Werdegang" MUSS in absteigender chronologischer Reihenfolge sein (aktuellste/neueste Position zuerst, älteste zuletzt).
+- „Akademische Laufbahn" MUSS ebenfalls in absteigender chronologischer Reihenfolge sein (neueste Ausbildung zuerst).
 `;
 
 export function userPrompt(rawSnippet, recruiter){

@@ -1,4 +1,4 @@
-import { PROFILE_SCHEMA, SYSTEM_PROMPT, userPrompt } from '../schema/schema.js';
+﻿import { PROFILE_SCHEMA, SYSTEM_PROMPT, userPrompt } from '../schema/schema.js';
 
 function buildResponseFormat(){
   return {
@@ -20,8 +20,11 @@ export async function generateProfile(rawSnippet, recruiter, { apiKey, model }){
   const headers = { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' };
   const inputMsgs = buildMessages(rawSnippet, recruiter);
   const body = {
-    model: model || 'gpt-5',
+    model: model || 'gpt-5-mini',
     input: inputMsgs,
+    reasoning: {
+      effort: 'high'
+    },
     text: {
       format: {
         type: 'json_schema',

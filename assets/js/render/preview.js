@@ -1,4 +1,4 @@
-let updatePageInfoCb = null;
+﻿let updatePageInfoCb = null;
 
 export function initPaged(onPageInfo){
   updatePageInfoCb = onPageInfo;

@@ -1,4 +1,4 @@
-function pad(n){ return String(n).padStart(2,'0'); }
+﻿function pad(n){ return String(n).padStart(2,'0'); }
 function todayStr(){ const d = new Date(); return d.getFullYear()+''+pad(d.getMonth()+1)+''+pad(d.getDate()); }
 
 export function formatFilenameAndExport(profile){
@@ -19,7 +19,7 @@ export function formatFilenameAndExport(profile){
         margin: [16,0,bandHeight + footerGap,0],
         filename: name,
         image: { type:'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS:true },
+        html2canvas: { scale: 2, useCORS:true, letterRendering: true },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
         // Prefer CSS-based breaks, but allow large blocks to split naturally.
         pagebreak: { mode: ['css','legacy'], avoid: ['.avoid-break','.skills-subgroup','.workexp-head'] }

@@ -1,4 +1,4 @@
-/* Base */
+﻿/* Base */
 :root{--bg: #ffffff; --fg: #0f172a; --muted:#475569; --border:#e2e8f0; --accent:#2563eb; --accent-weak:#dbeafe; --rail:#f8fafc; --danger:#b91c1c}
 [hidden]{display:none !important}
 :root.dark{--bg:#0b1020; --fg:#e5e7eb; --muted:#94a3b8; --border:#1f2937; --accent:#60a5fa; --accent-weak:#1e3a8a; --rail:#0f172a}
@@ -114,7 +114,7 @@ input,select,textarea{width:100%;padding:10px;border:1px solid var(--border);bor
 @media print{.paper{width:auto;box-shadow:none}}
 
 /* ===== CV Template (self-contained) ===== */
-.cvdoc{font-family:"Inter Tight", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:#0f1113;font-size:10.2px;line-height:1.28;-webkit-font-smoothing:antialiased}
+.cvdoc{font-family:system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;color:#0f1113;font-size:10.2px;line-height:1.28;-webkit-font-smoothing:antialiased}
 .cvdoc,.cvdoc p,.cvdoc li,.cvdoc h3,.cvdoc .where,.cvdoc .kv .val{overflow-wrap:anywhere;word-break:break-word}
 .cvdoc img{max-width:100%;height:auto}
 /* preserve user-intended line breaks for marked blocks */
